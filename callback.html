@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<title>AI Agent – Almost connected</title>
+<style>
+  body { font: 16px/1.6 -apple-system, "Segoe UI", Roboto, sans-serif; max-width: 720px; margin: 40px auto; padding: 0 16px; color: #222; background: #fff; }
+  h1 { font-size: 1.6em; }
+  code { display: block; word-break: break-all; background: #f3f3f3; padding: 12px; border-radius: 6px; }
+  button { margin-top: 12px; font: inherit; padding: 8px 14px; }
+</style>
+</head>
+<body>
+<h1>Almost connected</h1>
+<p>Copy the address below and paste it into the setup window that asked for it. This page sends nothing anywhere.</p>
+<code id="u"></code>
+<button id="b" type="button">Copy</button>
+<p><a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Use</a></p>
+<script>
+  var u = location.href;
+  document.getElementById("u").textContent = u;
+  document.getElementById("b").onclick = function () {
+    try { navigator.clipboard.writeText(u); this.textContent = "Copied"; } catch (e) {}
+  };
+</script>
+</body>
+</html>
